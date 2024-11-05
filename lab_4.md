@@ -10,4 +10,9 @@ CREATE TABLE `izba` (
   `wlasciciel` int,
   PRIMARY KEY (`adres_budynku`,`nazwa_izby`),
   KEY `wlasciciel` (`wlasciciel`),)
+
+#1
+alter table izba add column kolor varchar(30) after metraz;
+#2
+insert into izba values('przetworowa 45', 'spizarnia', '50', 'brazowy', '2');
 ```
