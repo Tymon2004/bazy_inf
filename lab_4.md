@@ -32,3 +32,27 @@ foreign key(id_konsumenta) references postac(id_postaci));
 #2
 insert into przetwory values(default, default, '2', 'bigos', default, '2');
 ```
+
+##Zadanie 5
+```sql
+#1
+Insert into postac values(default, 'Erak', 'wiking', '0340-01-22', '40');
+Insert into postac values(default, 'Ragnarok', 'wiking', '0330-01-22', '50');
+Insert into postac values(default, 'Hal', 'wiking', '0350-01-22', '30');
+Insert into postac values(default, 'Stig', 'wiking', '0345-04-17', '35');
+Insert into postac values(default, 'Berg', 'wiking', '0355-11-23', '25');
+#2
+create table statek(nazwa_statku varchar(30) primary key, rodzaj_statku enum('karli', 'sneki', 'skeidy', 'drakary'), data_wodowania varchar(20), max_ladownosc int unsigned);
+#3
+insert into statek values('Czapla', 'karli', '0345-08-23', '35');
+insert into statek values('Delfin', 'drakar', '0355-05-09', '35');
+#4
+alter table postac add column funkcja varchar(30);
+#5
+update postac set funkcja = 'Kapitan' where nazwa = 'Bjorn';
+#6
+alter table postac add column statek varchar(30);
+#7
+delete from izba where nazwa_izby = 'spizarnia';
+#8
+drop table izba
