@@ -1,4 +1,4 @@
-#Zadania lab 3
+#Zadania lab 4
 
 ##Zadanie 3
 ```sql
